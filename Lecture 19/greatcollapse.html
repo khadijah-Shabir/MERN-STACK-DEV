@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+           border: 1px solid black; 
+           overflow: auto;
+           /* auto krny se single line ne poori ki poori height le li */
+        }
+        .item{
+            width: 200px;
+            height: 200px;
+            margin: 2px;
+            background-color: green;
+            border: 1px solid red; 
+            float: left;
+            /* float left lganny se parent box collapse  kr gya or child class aik hi line main a gyi */
+        }
+        .item{
+            float: right;
+        }
+        /* #item1{
+            float: right;
+        }
+        #item2{
+            float: right;
+        }
+        #item3{
+            float: right;
+        } */
+        
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="item"id="item1">A</div>
+        <div class="item"id="item2">B</div>
+        <div class="item" id="item3">C</div>
+    </div>
+</body>
+</html>
+
+
+<!-- layout k liye float ka use na krein blky wikipedia type jis amin aik 2 image ko set krna hota h us k liye justuse krlein -->
