@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+   
+    img{
+        margin: 10px;
+    }
+    /* .image2{
+        /* Hm current window k relative position kr rhy hoty hain */
+        /* ap top right left bottiom usko khiska skty hain */
+        /* gap maintained rehta h ..jhan phli thi image wo jga khali ho ajye gi */
+        /* position: relative;
+        top: 100PX;
+        left: 100PX; }*/
+    /* .image2{  */
+        /* absolute positioning for overlapping */
+        /* yhan gap maintained nhi rehta blky jis ko hm khiskayein k uski jga agly wala apny ap koa lign kr lega */
+        /* position: absolute;
+        top: 200px;  
+    } */
+    .container{
+        border: 1px solid black;
+        background-color: bisque;
+        height: 4000px;
+    }
+
+    .image4{
+       position: fixed;
+       
+    }
+    .image3{
+        position: sticky;
+        top: 100px;
+    }
+    .class2{
+        background-color: aqua;
+        height: 1000px;
+    }
+
+</style>
+<body>
+    <div class="container">
+       
+    <img src="3 (2).jpg" 
+    alt="image1" 
+    height="300px" 
+    width="300px"
+    class="image1"
+    >
+
+    <img src="3 (3).jpg" 
+    alt="image2" 
+    height="300px" 
+    width="300px"
+    class="image2"
+    >
+
+    <img src="2.jpg" 
+    alt="image3" 
+    height="300px" 
+    width="300px"
+    class="image3"
+    >
+
+    <img src="dp.jpg" 
+    alt="image4" 
+    height="300px" 
+    width="300px"
+    class="image4"
+    >
+    </div>
+
+    <div class="class2">
+    Welcome to code help
+    </div>
+</body>
+</html>
