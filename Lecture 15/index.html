@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+    h1{
+        background-color: aqua;
+       /* border-style: solid;
+       border-color: black;
+       border-width: 2px; */
+
+       /* short hand notation */
+       border: solid black 2px;
+       /* for rounded edges */
+       border-radius: 5px;
+       /* sirf aik corner ko round krna h 
+       border-top-left-radius: 5px; */
+       width: 350px;
+       height: 200px;
+      
+    }
+    span{
+        /* in span tag height and width does not work */
+
+        background-color: aqua;
+        border: solid black 2px;
+        border-radius: 5px;
+        width: 350px;
+        height: 200px;
+    }
+
+    .firstpara{
+        /* padding and margin concept */
+        background-color: aquamarine;
+        border: solid black 2px;
+        border-radius: 5px;
+        width: 350px;
+        /* height: 200px; */
+
+        /* padding: 90px;
+        margin: 90px;
+         */
+
+         /* padding-top: 10px;
+         padding-bottom: 10px;
+         padding-left: 10px;
+         padding-right: 10px; */
+
+         /* padding:top right bottom left */
+         padding: 10px 20px 30px 40px;
+       
+        /* padding vertical horizontal */
+        padding: 20px 30 px;
+
+        /* margin on top or all sides */
+        /* margin-top: 100px;
+        margin-bottom: 100px; */
+        margin: 100px;
+    }
+    .secondpara{
+        background-color: rgb(99, 214, 32);
+        border: solid black 2px;
+        border-radius: 5px;
+        width: 350px;
+    }
+    .thirdpara{
+        background-color: brown;
+        border: solid black 2px;
+        border-radius: 5px;
+        width: 350px;
+    }
+</style>
+<body>
+
+    <h1>Welcome to code learning journey</h1>
+    <!-- why height and width specification of css does work for span tag?
+
+    the <span> is an inline-level element, therefore it does not support the width and height properties. So, if we anyhow want to give the width and height to a span, we have to change its default display type and set it to either inline-block or block . -->
+    <span>
+        Welcome to khadijah's learning journey
+    </span>
+
+    <p class="firstpara">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum quaerat soluta quia, doloribus tempore consequatur, eius enim nemo dolorum delectus, eaque voluptas? Expedita maiores omnis illo reiciendis repudiandae totam doloribus optio, sunt laboriosam deleniti quia iste perferendis, dolores quaerat deserunt!</p>
+
+
+    <p class="secondpara">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet aperiam, possimus quis porro veniam unde corporis quos quasi magni! Ipsam provident molestias molestiae alias architecto quia autem, quibusdam beatae culpa veniam officia qui harum voluptatem nesciunt fuga eaque libero nisi nobis impedit pariatur nemo! Fugiat nisi ex quis impedit a quia atque quidem beatae consectetur, repellendus unde quos provident natus tenetur, necessitatibus nihil non soluta dolorum officiis obcaecati est voluptatem! Nobis corporis iusto perspiciatis molestiae perferendis similique assumenda odit rem. Aspernatur maiores placeat laudantium obcaecati minus, temporibus pariatur adipisci ratione!
+    </p>
+
+    <p class="thirdpara">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet laboriosam eaque fuga obcaecati velit vitae, nulla eius illo voluptatibus mollitia modi rem voluptates nam optio incidunt saepe exercitationem laudantium aspernatur?
+    </p>
+</body>
+</html>
+
+<!-- Box sizing property -->
+
+<!-- The box-sizing property is used in CSS to define how the total width and height of an element is calculated. By default, an element's width and height are calculated based on its content, padding, and border. However, the box-sizing property allows you to change this behavior. When set to "border-box", the total width and height of an element includes its content, padding, and border, keeping the dimensions of the element intact. This can be beneficial for creating consistent layouts and spacing within a webpage. It provides more control over how elements are displayed and can help prevent unexpected layout issues. -->
