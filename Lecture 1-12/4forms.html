@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <fieldset>
+         <legend>login form</legend>
+        <label for="email">Enter Email</label>
+        <input type="text" id="email" placeholder="Enter your email">
+        <br>
+        <br>
+        <label for="password">Enter password</label>
+        <input type="text" id="password" placeholder="Enter your password">
+        <br>
+        <br>
+        <input type="submit" value="submit">
+        <button>Click here</button>
+    </fieldset>
+    </form>
+
+    <br>
+    <br>
+    <!-- input and label tag -->
+
+
+    <label for="selector">select date</label>
+    <input type="date" id="selector" name="selector">
+     <br>
+     <br>
+     <!-- select tag and option tag These are its attributes:
+
+name: You need to attach the name to every form control as it is used to reference 
+the data after it's submitted to the server.
+
+multiple: This attribute lets the user select multiple options from the dropdown menu.
+
+required: This is typically used for validation. With it, the form won't submit 
+unless a user selects at least one option from the dropdown.
+
+disabled: This attribute stops the user from interacting with the options.
+
+size: Expressed in numbers, the size attribute is used to specify how many options will be visible at a time.
+
+autofocus: This attribute is used on all form inputs, select inclusive, to specify that 
+the input should be on focus when the page loads-->
+
+<!-- here we have used optgroup to make a multilayer select box -->
+     <label for="selector1">Select your menu</label>
+     <br>
+     <select name="dishes" id="selector1" >
+    <optgroup label="1st Choice">
+      <option value="biryani">biryani</option>
+      <option value="palao">palao</option>
+      <option value="kabab">kabab</option></optgroup>
+    <optgroup label="2nd Choice">
+        <option value="kurkure">kurkure</option>
+        <option value="lays">lays</option>
+        <option value="chocolate">chocolate</option>
+
+    </optgroup>
+    </select>
+    <br>
+    <br>
+    <br>
+    <!-- how to select multilpe items      use multiple attribute with select-->
+    <label for="selector1">Select your menu</label>
+     <select name="dishes" id="selector1" multiple >
+     
+     <option value="biryani">biryani</option>
+     <option value="palao">palao</option>
+     <option value="kabab">kabab</option>
+<br>
+<br>
+<br>
+<!-- submit tag -->
+<button> submit your work</button>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<!-- textarea tag -->
+<textarea name="text" id="text" cols="30" rows="10"></textarea>
+<br>
+<br>
+<br>
+<!-- learning input -->
+<!-- create textbox -->
+<label for="textbox1">Textfeild</label>
+<input type="text" id="textbox1" name="textfeild">
+<br>
+<br>
+<br>
+<!-- create button -->
+<label for="button1">click:</label>
+<input type="submit" id="button1" name="button1" value="Subscribe">
+<br>
+<br>
+<br>
+<!-- create radiobutton -->
+<!-- give thse radio buttons only one name to if you want to make it select only one button -->
+<label for="radio1">radiobutton1</label>
+<input type="radio" id="radio1" name="radio">
+
+<label for="radio2">radiobutton2</label>
+<input type="radio" id="radio2" name="radio" >
+
+<label for="radio3">radiobuttona3</label>
+<input type="radio" id="radio3" name="radio" >
+<br>
+<br>
+<br>
+
+<!-- create checkboxes -->
+<label for="checkbox1">English</label>
+<input type="checkbox" id="checkbox1" name="checkbox" >
+
+<label for="checkbox2">Hindi</label>
+<input type="checkbox" id="checkbox2" name="checkbox" >
+<br>
+<br>
+<br>
+<!-- select file -->
+<label for="file1">Seelect File:</label>
+<input type="file" id="file1" name="file" >
+<br>
+<br>
+<br>
+<!-- create image button -->
+<input type="image" name="image1" id="image1" alt="click" src="arrow.png" height="20px" width="20px">
+<br>
+<br>
+<br>
+<!-- create password feild(doted) -->
+<label for="password1">Enter your password</label>
+<input type="password" name="password1" id="password1">
+<br>
+<br>
+<br>
+<!-- input type=date -->
+<label for="date1">select date</label>
+<input type="date" name="date1" id="date1">
+<br>
+<!-- make a counter -->
+<label for="number1">Experience(years):</label>
+<br>
+<input type="number" id="number1" name="number1" min="0" max="50">
+
+
+</body>
+</html>
