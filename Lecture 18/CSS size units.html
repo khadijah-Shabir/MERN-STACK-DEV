@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .class1{
+        border: 2px solid black;
+        width: 25%;
+    
+    }
+    .parent{
+        border: 1px solid black;
+        background-color: aqua;
+    }
+    .child{
+        border: 1px solid red;
+        background-color: blue;
+        width: 20%;
+    }
+    .class2{
+        border: 1px solid black;
+        width: 50vw;
+        height: 100vh;
+    }
+    .class3{
+        border: 1px solid red;
+        font-size: 100px;
+    }
+/* .wrapper {
+  font-size: 1em;
+}
+
+.px {
+  width: 200px;
+}
+
+.vw {
+  width: 10vw;
+}
+
+.em {
+  width: 10em;
+} */
+/* parent size*child size= 100px */
+
+.class4{
+    border: 1px solid red;
+    font-size: 5rem;
+}
+
+.container{
+    font-size: 5px;
+}
+.box{
+    font-size: 5em;
+}
+</style>
+<body>
+    <div class="class1">
+        Welcome to my learning journey..% concept
+    </div>
+<br>
+<br>
+    <div class="parent">
+        <div class="child">
+    learning % concept using parent and child container
+        </div>
+    </div>
+<br>
+<br>
+    <div class="class2">
+        Welcome to Codehelp...learning viewport height and viewport width concept 
+    </div>
+    <br>
+
+    <div class="class3">
+         learning pixel concept
+    </div>
+    <br>
+    <br>
+    <!-- <div class="wrapper">
+        <div class="box px">I am 200px wide</div>
+        <div class="box vw">I am 10vw wide</div>
+        <div class="box em">I am 10em wide</div>
+      </div>
+    <br>
+    <br> -->
+    <p class="class4">
+        Hello g! I'm learning rem..rem takes the defualt size value of its parents which is body(16px is the default size of body) here multiplied by font size assignedby CSS.
+        5*16 here
+        its a relative unit ...size executes acc to root element
+    </p >
+     
+    <div class="container">
+        <div class="box">
+            learning about em ...parent(container) size * child(box) size = what will appear on screen 
+        </div>
+    </div>
+</body>
+</html>
+
+<!-- Physical Pixels vs logical pixel: -->
+
+<!-- Physical Pixels:
+Physical pixels, also known as device pixels or hardware pixels, are the smallest physical units of a display. 
+logical pixel:
+Logical pixels, also known as CSS pixels or reference pixels, are a unit of measurement used in web development and CSS. It is used to help web designers know about rendering web content across different devices. -->
+
+
+<!-- ppi vs dpi
+
+They're often used interchangeably. However, technically they aren't the same thing – 300 PPI refers to a digital image or a computer screen while 300 DPI refers to a physical printer. Is 300 PPI high resolution? Yes, 300 PPI is considered a high-resolution photo, and it allows for good quality prints. 
+
+Pixels per inch (PPI) refers to the number of pixels contained within each inch of a digital image.
+DPI stands for Dots per Inch, referring to the number of ink droplets a printer will produce per inch while printing an image. The more dots of ink per inch the picture has, the more detail you will see when printed.
+
+-->
+
+<!-- which unit we should use?
+
+as a best practice and to create a responsive design, dont use absolute units. Rather go with relative units such as vh,vw,em and rem -->
+
+
+ <!-- applying em concept on padding -->
+
+<!-- Observation, depending on what font-size we set in the parent container, the child container padding will be multiplied with the font size only. 
+
+Even if we declared padding on parent container the padding will be applied only on parent and there is no effect on child. 
+
+
+ .parentcontainer{
+            font-size: 10px;
+            padding: 8px;
+
+        }
+        .childcontainer{
+            font-size:10em;
+            padding: 5em;
+            /* Total font size will be 50px */
+/* Total padding will be 500px = 10px*10em*5em (parent font size, child fontsize, child padding) */
+While padding of parent container will be applied only on parent  -->
+
+
+
+<!-- To increase responsive property we can use: 
+media queries property. (We always try to develop in low dimension let's say mob view, the using min width we can break down.)
+display : flexbox unit will also help us, as it will give us a chance to display divs in row or column wise using wrap or no wrap. 
+Using of relative property like %, vw, vh. 
+By giving a height a width in html and fix width by max() or min() function, and height : auto property, using calc() function will also help us in this case, -->
+
+
+<!-- how to design a responsive <website 
+https://chat.openai.com/share/0aa34b88-c150-4e7f-ae5b-5835a015a745 
