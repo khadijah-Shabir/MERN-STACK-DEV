@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        background-color: white;
+        border: 5px solid black;
+        margin: 2px;
+        padding: 2px;
+        display: flex;
+        height: 800px;
+        /* by default flex direction is row */
+        /* flex-direction: column;
+        flex-direction: column-reverse; */
+        flex-direction: row;
+        /* flex-wrap: wrap; */
+        /* wrap set krny se jo boxes hain wo apni 200px ko maintain krein gy untill k space nhi bchti ...jb space nhi bchti to wo squeez kr jayein gy */
+
+       justify-content: start;
+       /* justify-content: space-between;
+       justify-content: space-around; */
+
+       align-items: start;
+       align-content: start;
+       /* is sy jb hm inspect kr k ikhta krein k to boxes k beech amin gap nai aye ga */
+      /* align-content: end;
+      is se sary box end pe neeechy chly jayein gy */
+
+    }
+
+    .box{
+        /* beshk hm ne 200px size set kya hau bxes ka but flex ki wja se jb space km ho gi to squeez kr jayein gy  */
+        /* height: 200px;
+        width: 200px; */
+        border: 2px solid black;
+        margin: 2px;
+        padding: 2px;
+    }
+
+    #box1{
+        background-color: aqua;
+        /* order: 500; */
+        /* order se sequence change ho jaye ga or ye box end pe chla jaye ga */
+        /* flex-grow: 1;
+        flex-basis: 400px; */
+        align-self: center;
+    }
+    #box2{
+        background-color: blue;
+        /* flex-grow: 1;*/
+    } 
+    #box3{
+        background-color: orange;
+        /* flex-grow: 1; */
+    }
+    #box4{
+        background-color: brown;
+        /* flex-grow: 1; */
+
+        /* order: -1;  */
+        /* is se 4 wala 1 ki jga pe chla jaye ga */
+        /* flex-shrink: 4; */
+        /* jb hm inspect kr k shrink krein to 4 wala box 4 gunah speed se shrink ho rha hoga */
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="box" id="box1">Box1</div>
+        <div class="box"id="box2">box2</div>
+        <div class="box"id="box3">Box3</div>
+        <div class="box"id="box4">Box4</div>
+    </div>
+</body>
+</html>
+
+
+
+
+<!-- The flex-flow property is a shorthand property for setting both the flex-direction and flex-wrap properties.
+
+Example:
+.flex-container {
+  display: flex;
+  flex-flow: row wrap;
+} -->

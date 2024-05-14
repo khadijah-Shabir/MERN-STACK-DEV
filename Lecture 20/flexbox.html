@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        background-color: white;
+        border: 5px solid black;
+        margin: 2px;
+        padding: 2px;
+        display: flex;
+        height: 500px;
+        /* by default flex direction is row */
+        /* flex-direction: column;
+        flex-direction: column-reverse; */
+        flex-direction: row;
+        /* flex-wrap: wrap; */
+        /* wrap set krny se jo boxes hain wo apni 200px ko maintain krein gy untill k space nhi bchti ...jb space nhi bchti to wo squeez kr jayein gy */
+
+       justify-content: start;
+       /* justify-content: space-between;
+       justify-content: space-around; */
+
+       align-items: start;
+       align-content: start;
+       /* is sy jb hm inspect
+     kr k ikhta krein k to boxes k beech amin gap nai aye ga */
+      /* align-content: end;
+      is se sary box end pe neeechy chly jayein gy */
+
+    }
+
+    .box{
+        /* beshk hm ne 200px size set kya hau bxes ka but flex ki wja se jb space km ho gi to squeez kr jayein gy  */
+        height: 200px;
+        width: 200px;
+        border: 2px solid black;
+        margin: 2px;
+        padding: 2px;
+    }
+
+    #box1{
+        background-color: aqua;
+        /* order: 500; */
+        /* order se sequence change ho jaye ga or ye box end pe chla jaye ga */
+        flex-grow: 1;
+        flex-basis: 400px;
+    }
+    #box2{
+        background-color: blue;
+        flex-grow: 1;
+    }
+    #box3{
+        background-color: orange;
+        flex-grow: 1;
+    }
+    #box4{
+        background-color: brown;
+        flex-grow: 1;
+        /* order: -1;  */
+        /* is se 4 wala 1 ki jga pe chla jaye ga */
+        flex-shrink: 4;
+        /* jb hm inspect kr k shrink krein to 4 wala box 4 gunah speed se shrink ho rha hoga */
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="box" id="box1">Box1</div>
+        <div class="box"id="box2">box2</div>
+        <div class="box"id="box3">Box3</div>
+        <div class="box"id="box4">Box4</div>
+    </div>
+</body>
+</html>
+
+
+
+
+<!-- The flex-flow property is a shorthand property for setting both the flex-direction and flex-wrap properties.
+
+Example:
+.flex-container {
+  display: flex;
+  flex-flow: row wrap;
+} -->
+
+
+
+<!-- It seems you're referring to the "wrapping" behavior in the Flexbox layout model. Flexbox, or the Flexible Box Layout, is a layout model that allows items in a container to be arranged dynamically to best fit the available space. The concept of wrapping in Flexbox pertains to the way flex items move onto new lines when there's not enough space to fit them on the current line.
+
+Here's a breakdown:
+
+1. **No Wrapping by Default**: Flex containers come with a default property of `flex-wrap: nowrap;`. This means that no matter how many items you put inside a flex container, they will all try to fit onto a single line (either shrinking or growing based on other flex properties).
+
+2. **Wrap**: If you set `flex-wrap: wrap;`, the items will wrap onto multiple lines if they run out of room on the main axis. The direction in which they wrap (vertically or horizontally) depends on the `flex-direction` property. 
+
+    - For `flex-direction: row;` (default), items will wrap like words in a paragraph.
+    - For `flex-direction: column;`, items will wrap from top-to-bottom and then onto a new "column".
+
+ 3. **Wrap Reverse**: Using `flex-wrap: wrap-reverse;` reverses the cross-axis, which means the flex items will wrap, but in the opposite direction of the regular wrap. -->
+
+    <!-- - For `flex-direction: row;`, items will wrap upwards.
+    - For `flex-direction: column;`, items will wrap in a right-to-left column sequence if the writing mode is left-to-right.
+
+4. **Shortcut**: The `flex-flow` property is a shorthand property for setting both the `flex-direction` and `flex-wrap` properties. For example: `flex-flow: row wrap;`.
+
+5. **Controlling Wrapping Space**: Once wrapping is in place, the `justify-content`, `align-items`, and `align-content` properties can be used to control the alignment and spacing of items along both the main axis and the cross axis. Notably, `align-content` is specifically helpful when there's wrapping involved as it helps distribute space between the wrapped lines.
+
+Remember that wrapping in Flexbox depends on the size of the flex container, the size of the flex items, and the properties set on both the container and the items. Experimenting with different combinations and resizing your viewport can help you get a better grasp of how wrapping works in various scenarios. --> 
+
+
+
+<!-- Flex basis and align self concept -->
+
+
+<!-- Certainly! Both flex-basis and align-self are properties in the Flexbox layout model, each serving a distinct purpose:
+
+1. flex-basis:
+
+flex-basis defines the initial main size of a flex item before any available space is distributed according to the flex factors (flex-grow and flex-shrink). In simpler terms, it sets the default size of an item before it's resized by any Flexbox logic.
+
+Syntax: flex-basis: <length> | auto;
+
+For example:
+
+css
+Copy code
+.flex-item {
+    flex-basis: 200px;  /* The item will start at 200px before growing or shrinking */
+}
+
+auto: This is the default value. The size is based on the item's content, width, height, or any other relevant property.
+<length>: A fixed size (like 200px, 50%, etc.)
+
+In the context of the flex shorthand property (which combines flex-grow, flex-shrink, and flex-basis), flex-basis is the third value:
+
+css
+Copy code
+.flex-item {
+    flex: 1 0 200px;  /* grow, shrink, basis */
+}
+
+2. align-self:
+
+While align-items on the flex container determines how all the flex items are aligned on the cross axis, align-self allows you to override this alignment for individual flex items.
+
+Syntax: align-self: auto | flex-start | flex-end | center | baseline | stretch;
+
+For example:
+
+css
+Copy code
+.container {
+    display: flex;
+    align-items: center; /* default alignment for all items */
+}
+
+.special-item {
+    align-self: flex-start; /* This particular item will be aligned at the start */
+}
+
+
+Here's a breakdown of the values:
+
+auto: The item will follow the align-items value set on the flex container.
+flex-start: Aligns the item at the start of the cross axis.
+flex-end: Aligns the item at the end of the cross axis.
+center: Centers the item on the cross axis.
+baseline: Aligns the item on its baseline (useful for text items).
+stretch: The item will stretch to fill the container (if no height/width is set).
+Practical Application:
+
+Imagine you're building a dashboard and have a row of boxes (or "cards"). All these cards have the same height, except one, which contains more information and is naturally taller.
+
+If you want all cards to be vertically centered except the taller one (which you want aligned to the top), you'd use align-items: center on the container and align-self: flex-start on the taller card. If you want a specific card to have a standard width, you'd use flex-basis to set that width.
+
+Together, these properties offer fine-grained control over the positioning and sizing of flex items within a Flexbox container. -->
