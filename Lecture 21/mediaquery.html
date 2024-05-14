@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box{
+        border: 3px solid black;
+        background-color: aqua;
+        height: 400px;
+        width: 400px;
+    }
+    /* 500px se neechy aye gi screen to color aqua ho jaye ga */
+    /* 500px se upr blue color chlao */
+    /* max width ka concept is k  bilkul opposite hota h */
+   /* in  you can also set a range like (min-width:500px) and(max-width:1000px)...is se jo hm set kregy us main apply hoga color */
+    @media (min-width:500px){
+        .box{
+       background-color: blue;
+        }
+    }
+</style>
+<body>
+    <div class="box">
+        We are learning Media Query
+    </div>
+</body>
+</html>
